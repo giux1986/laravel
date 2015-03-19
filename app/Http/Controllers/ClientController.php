@@ -144,7 +144,7 @@ class ClientController extends Controller {
 
 		Mail::send('emails.welcome', array('post' => $_POST), function($msg) {
 		   $msg->from('giux1986@gmail.com', 'Laravel Admin');
-		   $msg->to(Input::get('email'), Input::get('name'))->subject('You have');
+		   $msg->to('giux1986@gmail.com', 'Laravel user')->subject('You have');
 		});
 		return redirect("getClients");
 	}
